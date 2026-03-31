@@ -1,0 +1,46 @@
+﻿.filter-bar {
+  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(170px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.filter-bar .btn {
+  width: 100%;
+}
+
+.pagination {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.pagination span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .filter-bar {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .filter-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .pagination .btn {
+    width: auto;
+  }
+}

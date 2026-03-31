@@ -1,0 +1,24 @@
+﻿.pagination {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.pagination span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .pagination {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .pagination .btn {
+    width: auto;
+  }
+}

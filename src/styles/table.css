@@ -1,0 +1,191 @@
+﻿/* OUTER CENTERING */
+.table-outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Wrapper */
+.table-wrapper {
+  width: 100%;
+  max-width: 1500px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* Table */
+.lead-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+/* Header */
+.lead-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f9fafb;
+  padding: 14px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Cells */
+.lead-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+/* Rows */
+.lead-table tbody tr:nth-child(even) {
+  background: #fcfcfd;
+}
+
+/* Hover */
+.lead-table tbody tr:hover {
+  background: #eef2ff;
+  transform: scale(1.002);
+}
+
+/* Name + Email */
+.lead-name-cell {
+  font-weight: 600;
+  color: #111827;
+}
+
+.lead-email-cell {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Actions */
+.actions-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center align fix */
+  gap: 6px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+/* Primary */
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.3);
+}
+
+/* Secondary */
+.btn-secondary {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.btn-secondary:hover {
+  background: #e0e7ff;
+}
+
+/* Disabled */
+.btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Convert chip */
+.role-action-chip {
+  font-size: 10px;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Empty */
+.empty-cell {
+  text-align: center;
+  color: #9ca3af;
+  padding: 32px 14px;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .lead-table thead {
+    display: none;
+  }
+
+  .lead-table,
+  .lead-table tbody,
+  .lead-table tr,
+  .lead-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .lead-table tr {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    margin: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .lead-table td {
+    border-bottom: 1px dashed #e5e7eb;
+    padding: 10px 12px;
+  }
+
+  .lead-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    color: #6b7280;
+    margin-bottom: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .lead-table td:last-child {
+    border-bottom: none;
+  }
+}
+.lead-table th,
+.lead-table td {
+  text-align: center;
+  vertical-align: middle;
+}
